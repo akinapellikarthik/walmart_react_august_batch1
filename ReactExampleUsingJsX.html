@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+    <h1> React Example using JSX</h1>
+    <div id="root"></div>
+    <script type="text/babel">
+        var divElement=
+        <div>
+            <h1>Welcome to Walmart</h2>
+            <a href="https://www.walmart.com/">Go To Walmart </a>
+        </div>;
+        /*
+        After translation:
+         var anchorElement=React.createElement("a",{href:"https://www.walmart.com/"},"Go to Walmart")
+        var h1Element=React.createElement("h1",{style:{backgroundColor:"pink",color:"blue"}},"Welcome to Walmart")
+        var divElement= React.createElement("div",null,[h1Element,anchorElement])
+       
+        */
+        const root=ReactDOM.createRoot(document.getElementById("root"));
+        root.render(divElement);// translation will occur
+    </script>
+</body>
+</html>
+<!--
+    JSX -- js extensibility
+    -- html written in js
+    -- tags(html) -- closing, nesting
+    -- JSX translated to js
+
+    browser -- html,css,js
+    typescript, jsx -> translate to js
+    compile the jsx -> syntactical errors
+
+    transpiler -> translator+complier
+    babel -> transpiler
+
+    React - jsx, tsx
+
+    Is jsx mandatory for react? --  No
+    Advantages 
+    -- Simpler than writing in normal js
+    -- Clearer syntactical errors listing
+
+    Disadvantages
+        -- not scalable
+        -- not readable(better than using only js)
+        -- modularity
+        -- not maintainable
+        -- file structure
+        -- suitable for smaller projects
+        -- difficult to code
+
+    Components Architecture
+    React -- Facebook
+    Facebook app -- number of components(class) -- 7-8 lakh   
+-->
