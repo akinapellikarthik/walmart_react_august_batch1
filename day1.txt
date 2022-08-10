@@ -1,0 +1,222 @@
+Why reactjs?
+-- faster delivery -- reusability of components
+-- learning curve is smaller; easy to develop; understand; easy to maintain
+-- big cummunity support
+-- faster rendering ; faster loading of initial project; faster page reloads;
+-- virtual DOM
+-- immutability(once assigned, cannot be changed) -- state,props of the component -- immutable;
+-- Unit testing in reactjs
+-- jest framework -- built in part of app-- minimum configuration
+-- unit test a particular component
+-- MVC framework; model -- data; view -- what the users see; controller -- bridge between the model and view
+-- REACT -- V in MVC; View part of MVC
+-- Angular -- MVC, MVVM; framework
+-- REACT -- library ; (client side)front end scripting
+-- Nodejs -- server side scripting
+-- Angular -- two way data binding; any changes made in the view will be available in model and any changes in the model will be updated in the view;
+-- REact -- uni directional flow of data; one way data binding
+-- Single page app -- SPA -- one index.html
+Inside the single html -- load the components; routing at client side; on basis of route -- load the corresponding component
+
+-- Java app -- multiple html pages -- multi page app
+-- .Net -- class -- corresponding html page
+
+
+
+-- Earlier days-developing the app -- server -- render the front end;start the server ; do the unit testing the front end;
+-- front end technologies -- no need for an external server; unit test my front end with the server; 
+
+
+
+
+state:{ctr:1};
+state.ctr=2;//not updating the state directly
+this.setState({ctr:2});// modify the state and rerender the component
+
+counter ; inc -- old state +1;
+state -- object 
+
+
+code :
+update 2 counters: in a single statement;
+batch updates : batch all the updates together -- create a virtual DOM ; asynchronous in nature
+
+DOM -- Document Object Model 
+	-- tree structure of the entire HTML page
+	-- js -- traverse the DOM; dynamic
+	-- js will manipulate the REAL DOM
+	-- Manipulating the DOM is a costly affair
+	-- refresh a element -- entire page gets reloaded
+	
+React -- virtual DOM
+virtual DOM -- tree structure which exists in memory and is not loaded in browser
+
+Initial project load:
+React project -- return a virtual DOM
+virtual DOM mapped to the rEAL DOM
+Real DOM will be loaded in the browser
+
+User updates and page has to be modified
+React -- return a new Virtual DOM with the required chnages
+
+Diffing algorithm -- find out the differences b/w the 2 last virtual DOM's
+
+REAL DOM will be manipulated only where there are changes 
+Only the changes will be done on the REAL DOM
+
+Advantage : Lesser number of elements which are refreshed
+Lesser memory; lesser time for page modifications
+
+time -- more, memory is more
+new virtual DOM is created
+
+React -- virtual DOM -- DOM in memory
+new virtual DOM -- really fast
+diffing algo -- minimum time for comparison
+
+time is so small -- performance benefit 
+React -- faster
+
+tree structure -- memory
+
+React app
+-- Require modules (packages)-- library files
+-- Install nodejs
+	npm -- node package manager -- install, upgrading modules
+
+import statements
+#include<iostream.h>
+
+-- Different versions of nodejs -- yes
+-- Global and local version
+Global -- for all the folders -- installed 16.x
+For a particular project -- v 14.x
+
+nvm install node@14.x
+
+nvm alias default 10.15
+terminal node -v 10.15
+
+nvm use 16.16
+
+nvm use default
+
+-- Create a react project
+-- npx npm intsall module and execute module
+npx create-react-app first-project
+
+File structures
+package.json 
+-- single config file present
+-- dependencies of my project
+react, react-dom, react-scripts
+
+No other config file
+host :localhost
+port -- 3000
+start the development server
+started webpack
+compiled using webpack
+babel is not seen
+
+Abstracted from the developer -- react-scripts(default config))
+
+Override the default configuration :
+1. npm eject
+-- unabstract the config files; we have to manage the config files
+-- one time process which cannot be undone
+2. run the project 3001
+
+package-lock.json
+-- exact version number of all the dependencies and inner dependencies
+-- optional file
+-- commit ur project in github ; ignore the node_modules folder
+-- X -- get the project the github
+	npm install -- install the dependencies from package.json
+	-- if package-lock.json present -- exact same versions which are there in the file
+	-- if package-lock.json not present -- latest versions of the dependencies
+
+project may work corectly with 17.1.1
+
+react : ~17.2.1 (greater than 17.x.x)
+
+package.lock-json: 17.1.1
+
+No package-lock.json : npm install ; 17.7.1
+
+This may lead to errors
+v17.x and v18.x -- there are a lot of changes
+
+development dependencies;
+production dependencies
+
+npm install --
+
+^ 
+~ 
+
+^17.2.3 -- 17.x.x< 18.0
+
+~17.2.3 -- 17.2.x< 17.3.0
+
+17.2.3 -- exact version
+
+public folder -- static resources of project
+-- index.html
+-- images required in the front end
+
+src folder
+-- source code of the project
+-- index.js
+-- app.js
+
+run my project
+react-scripts
+-- abstract the config files
+-- start the dev server
+-- setup the webpack and start the webpack
+webpack -- bundler 
+
+js:
+var i=10;
+var i=20;// redeclaration is possible
+
+use strict
+var i=10;
+var i=20;// error
+
+React -- strict mode
+deprecated functions -- warnings
+
+upgrade from v17.x to v18.x
+package.json
+code changes -- make it explicitly
+ReactDOM 
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
